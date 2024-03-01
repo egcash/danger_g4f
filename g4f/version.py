@@ -81,8 +81,9 @@ class VersionUtils:
             return check_output(command, text=True, stderr=PIPE).strip()
         except CalledProcessError:
             pass
+        
 
-        raise VersionNotFoundError("Version not found")
+#        raise VersionNotFoundError("Version not found")
 
     @cached_property
     def latest_version(self) -> str:
